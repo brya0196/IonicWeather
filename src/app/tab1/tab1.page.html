@@ -1,6 +1,12 @@
 <ion-content>
   <ion-grid style="height: 100%">
-    <ion-row justify-content-center align-items-center style="height: 100%">
+    <ion-row class="ion-justify-content-end">
+      <div [ngSwitch]="weather">
+        <ion-icon name="cloud" class="weather-status" *ngSwitchCase="'Clouds'"></ion-icon>
+      </div>
+
+    </ion-row>
+    <ion-row justify-content-center align-items-center style="height: 90%">
       <p>{{temperature}}º</p>
     </ion-row>
   </ion-grid>
