@@ -3,6 +3,10 @@
     <ion-row class="ion-justify-content-end">
       <div [ngSwitch]="weather">
         <ion-icon name="cloud" class="weather-status" *ngSwitchCase="'Clouds'"></ion-icon>
+        <ion-icon name="cloudy" class="weather-status" *ngSwitchCase="'Snow'"></ion-icon>
+        <ion-icon name="rainy" class="weather-status" *ngSwitchCase="'Rain'"></ion-icon>
+        <ion-icon name="rainy" class="weather-status" *ngSwitchCase="'Drizzle'"></ion-icon>
+        <ion-icon name="thunderstorm" class="weather-status" *ngSwitchCase="'Thunderstorm'"></ion-icon>
       </div>
 
     </ion-row>
