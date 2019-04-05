@@ -8,15 +8,16 @@ import {WeatherService} from '../service/weather.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  temperature = 45;
+  temperature = '0';
+  weather: string;
 
   constructor(private geolocation: Geolocation, private weatherService: WeatherService) {}
 
   ngOnInit(): void {
     this.geolocation.watchPosition().subscribe((data) => {
-      console.log(data);
       this.weatherService.getByCoordantes(data.coords.latitude, data.coords.longitude).subscribe(value => {
-        this.temperature = value.main.temp;
+        this.temperature = Number(value.main.temp).toFixed(0).toString();
+        this.weather = String(value.weather[0].main);
       });
     });
   }
