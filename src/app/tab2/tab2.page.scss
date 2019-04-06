@@ -6,15 +6,19 @@
   --padding-start: 16px !important;
   --padding-end: 16px !important;
   width: 100%;
-}
 
+  .box {
+    --padding-start: 10px !important;
+  }
 
-.search .btn {
-  margin: 0 !important;
-  --padding-start: 0.9em !important;
-  --padding-end: 0.9em !important;
-  height: 100%;
-  width: 20%;
+  .btn {
+    margin: 0 !important;
+    --padding-start: 0.9em !important;
+    --padding-end: 0.9em !important;
+    height: 100%;
+    width: 20%;
+    font-size: 20px;
+  }
 }
 
 p {

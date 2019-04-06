@@ -1,8 +1,8 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-item class="search">
-        <ion-input type="text" placeholder="City name" [(ngModel)]="cityName"></ion-input>
+      <ion-item class="search" lines="none">
+        <ion-input type="text" class="box" placeholder="City name" [(ngModel)]="cityName"></ion-input>
         <ion-button class="btn" item-end color="primary" expand="full" (click)="getTemperature()">
           <ion-icon name="search"></ion-icon>
         </ion-button>
