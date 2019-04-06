@@ -16,6 +16,6 @@ export class WeatherService {
   }
 
   getByCityName(name): Observable<any> {
-    return this.http.get(`https://api.openweathermap.org/data/2.5/forecast?q=${name}&units=metric&appid=${this.weatherApiKey}`);
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&appid=${this.weatherApiKey}`);
   }
 }

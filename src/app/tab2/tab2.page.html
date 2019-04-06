@@ -1,9 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-item class="search">
+        <ion-input type="text" placeholder="City name" [(ngModel)]="cityName"></ion-input>
+        <ion-button class="btn" item-end color="primary" expand="full" (click)="getTemperature()">
+          <ion-icon name="search"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-row>
 
-<ion-content></ion-content>
+    <ion-row justify-content-center align-items-center>
+      <p>{{temperature}}º</p>
+    </ion-row>
+  </ion-grid>
+</ion-content>
