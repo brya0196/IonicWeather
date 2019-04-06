@@ -8,16 +8,16 @@ import {AlertController} from '@ionic/angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  cityName: string;
+  name: string = '';
   temperature = '0';
 
   constructor(private weatherService: WeatherService, private alertController: AlertController) {}
 
   async getTemperature() {
-    if (this.cityName.length <= 0) {
+    if (this.name.length <= 0) {
       const alert = await this.alertController.create({
         header: 'Error',
-        message: 'The city name is empty',
+        message: 'The country or city name is empty',
         buttons: ['OK']
       });
 
@@ -26,12 +26,12 @@ export class Tab2Page {
     }
 
     try {
-      const value = await this.weatherService.getByCityName(this.cityName).toPromise();
+      const value = await this.weatherService.getByCityName(this.name).toPromise();
       this.temperature = Number(value.main.temp).toFixed(0).toString();
     } catch (e) {
       const alert = await this.alertController.create({
         header: 'Error',
-        message: 'City not found',
+        message: 'Country or City not found',
         buttons: ['OK']
       });
 
